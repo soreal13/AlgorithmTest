@@ -1,5 +1,8 @@
 package programmers.level1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class PickTwoPlus {
 
 //    문제 설명
@@ -18,13 +21,38 @@ public class PickTwoPlus {
         int[] answer1 = solution(test1);
         int[] answer2 = solution(test2);
 
-        System.out.println(answer1);
-        System.out.println(answer2);
+        for(int i=0; i<answer1.length; i++) {
+            System.out.println(answer1[i]);
+        }
+//        for(int i=0; i<answer2.length; i++) {
+//            System.out.println(answer2[i]);
+//        }
 
     }
 
     public static int[] solution(int[] numbers) {
-        int[] answer = {};
+//        int[] answer = {};
+        ArrayList<Integer> preAnswer = new ArrayList<>();
+
+        // 겹치지 않게 넣기
+        for(int i=0; i<numbers.length; i++) {
+            for(int j=0; j<numbers.length-i-1; j++) {
+                System.out.println(numbers[i]+" 더하기 "+numbers[numbers.length-j-1]+"은 "+(numbers[i]+numbers[numbers.length-j-1]));
+                if(!preAnswer.contains(numbers[i] + (numbers[numbers.length-j-1]))) {
+                    System.out.println(numbers[i] + (numbers[numbers.length-j-1]) + " in");
+                    preAnswer.add(numbers[i]+numbers[numbers.length-j-1]);
+                }
+            }
+        }
+
+        // 배열에 넣고 정렬하기
+        int[] answer = new int[preAnswer.size()];
+        for (int i=0; i<answer.length; i++) {
+            answer[i] =  preAnswer.get(i);
+        }
+
+        answer = Arrays.stream(answer).sorted().toArray();
+
 
         return answer;
     }
