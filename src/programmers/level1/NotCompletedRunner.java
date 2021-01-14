@@ -2,6 +2,7 @@ package programmers.level1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class NotCompletedRunner {
@@ -47,6 +48,27 @@ public class NotCompletedRunner {
         }
         return participant[participant.length-1];
 
+    }
+
+    public static String hashSolution(String[] participant, String[] completion)
+    {
+        HashMap<String, Integer> map = new HashMap<>();
+
+        for (String name :
+                completion) {
+            map.put(name, map.getOrDefault(name, 0) + 1);
+            // getOrDefault() : 찾는 키가 존재하면 해당 키의 값을 반환하고 없으면 기본값을 반환
+        }
+
+        for (String name :
+                participant) {
+            map.put(name, map.getOrDefault(name, 0) - 1);
+
+            if (map.get(name) < 0)
+                return name;
+        }
+
+        return "";
     }
 
 
