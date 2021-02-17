@@ -1,11 +1,10 @@
 package programmers.skillset;
 
 import java.util.Arrays;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class TheBiggistNumber {
+public class TheBiggestNumber {
 
 
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class TheBiggistNumber {
         int[] numbers1 = {6, 10, 2};
         int[] numbers2 = {3, 30, 34, 5, 9};
 
-        TheBiggistNumber tbn = new TheBiggistNumber();
+        TheBiggestNumber tbn = new TheBiggestNumber();
 
         System.out.println(tbn.solution(numbers1));
         System.out.println(tbn.solution(numbers2));
