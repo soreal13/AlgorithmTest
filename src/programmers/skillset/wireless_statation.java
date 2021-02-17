@@ -48,15 +48,12 @@ public class wireless_statation {
 
     public static int solution2(int n, int[] stations, int w) {
         int answer = 0;
-
-        // Object보다 원시형
-        // 루프문 의
-
         int si=0;
         int position = 1;
         while(position <= n) {
             if(si < stations.length && stations[si] - w <= position ) {
                 position = stations[si] + w + 1;
+                si += 1;
             } else {
                 answer += 1; // 기지국 하나 설치
                 position += w*2 + 1; //기지국 범위만큼 이동
