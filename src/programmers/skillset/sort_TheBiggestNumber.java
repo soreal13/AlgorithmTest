@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class TheBiggestNumber {
+public class sort_TheBiggestNumber {
 
 
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class TheBiggestNumber {
         int[] numbers1 = {6, 10, 2};
         int[] numbers2 = {3, 30, 34, 5, 9};
 
-        TheBiggestNumber tbn = new TheBiggestNumber();
+        sort_TheBiggestNumber tbn = new sort_TheBiggestNumber();
 
         System.out.println(tbn.solution(numbers1));
         System.out.println(tbn.solution(numbers2));
