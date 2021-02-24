@@ -3,7 +3,7 @@ package programmers.skillset;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class wireless_statation {
+public class greedy_wireless_statation {
 
 
     public static void main(String[] args) {
