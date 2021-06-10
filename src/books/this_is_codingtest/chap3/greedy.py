@@ -33,3 +33,5 @@ result += (count) * first # 가장 큰 수 더하기
 result += (m - count) * second # 두번째로 큰 수 더하기
 
 print(result);
+
+# 숫자 카드 게임
